@@ -9,7 +9,7 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand href="#home">
                         AIM |<span className=''> Foucs Terget</span>
-                        <span className='d-none d-md-block text-sm'>Helping tell their career storices and get hired</span>
+                        <span className='d-none d-md-block text-sm'>Helping to make your career as a storices</span>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
