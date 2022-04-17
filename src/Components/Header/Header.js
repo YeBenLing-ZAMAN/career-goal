@@ -23,7 +23,7 @@ const Header = () => {
                         <Nav className="ms-auto nav-continer d-flex align-items-center">
                             <CustomLink to="/">Home</CustomLink>
                             <CustomLink to="/course">Course</CustomLink>
-                            <CustomLink to="/contact">Contact</CustomLink>
+                            <CustomLink to="/about">About</CustomLink>
                             <CustomLink to="/blogs">Blogs</CustomLink>
                             {
                                 user

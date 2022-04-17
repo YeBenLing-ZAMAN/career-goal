@@ -3,8 +3,11 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const ServiceAsCartShowing = ({item, handleAddToCart}) => {
-    const { picture, name, about, balance } = item;
+    const { picture, name, about, balance,id } = item;
     const navigate = useNavigate();
+    const navigateToCourseDisplay = id =>{
+        navigate(`/course/${id}`);
+    }
 
     return (
         <Col className='d-flex'>
@@ -19,7 +22,7 @@ const ServiceAsCartShowing = ({item, handleAddToCart}) => {
                     </div>
                     <div className='ms-auto'>
                     <Button variant="outline-primary me-2">see more</Button>
-                    <Button onClick={()=>navigate('/displayCourse')} variant="outline-danger">Add cart</Button>
+                    <Button onClick={()=>navigateToCourseDisplay(id)} variant="outline-danger">Add cart</Button>
                     </div>
                 </div>
             </Card.Body>
