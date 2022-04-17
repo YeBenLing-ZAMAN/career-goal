@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
-const ServiceAsCartShowing = ({item}) => {
+const ServiceAsCartShowing = ({item, handleAddToCart}) => {
     const { picture, name, about, balance } = item;
+    const navigate = useNavigate();
+
     return (
         <Col className='d-flex'>
         <Card className=''>
@@ -16,7 +19,7 @@ const ServiceAsCartShowing = ({item}) => {
                     </div>
                     <div className='ms-auto'>
                     <Button variant="outline-primary me-2">see more</Button>
-                    <Button variant="outline-danger">Add cart</Button>
+                    <Button onClick={()=>navigate('/displayCourse')} variant="outline-danger">Add cart</Button>
                     </div>
                 </div>
             </Card.Body>

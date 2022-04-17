@@ -72,12 +72,6 @@ const Footer = () => {
                         <div className="row gx-1 align-items-center justify-content-around">
                             <div className="col-xl-4 col-md-6 col-6 text-center">
                                 <div className="">
-                                    <div className="dropup">
-                                        <button className="btn btn-white dropdown-toggle text-primary" type="button"
-                                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i className="fas fa-globe"></i> language
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                             <div className="col-xl-4 col-md-6 col-6 text-center">team of use</div>
