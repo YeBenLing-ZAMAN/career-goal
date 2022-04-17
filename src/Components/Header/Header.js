@@ -1,8 +1,15 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import CustomLink from './CustomLink';
 import './Header.css';
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+    };
     return (
         <div className='sticky-sm-top'>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -18,8 +25,16 @@ const Header = () => {
                             <CustomLink to="/course">Course</CustomLink>
                             <CustomLink to="/contact">Contact</CustomLink>
                             <CustomLink to="/blogs">Blogs</CustomLink>
-                            <CustomLink to='/login'>Log In</CustomLink>
-                            <CustomLink to="/signup" className='btn btn-danger rounded-pill px-4 text-light'>Sign Up</CustomLink>
+                            {
+                                user
+                                    ?
+                                    <CustomLink to='/signup' onClick={logout} className='btn btn-danger rounded-pill px-4 text-light'>Log out</CustomLink>
+                                    :
+                                    <>
+                                        <CustomLink to='/login'>Log In</CustomLink>
+                                        <CustomLink to="/signup" className='btn btn-danger rounded-pill px-4 text-light'>Sign Up</CustomLink>
+                                    </>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

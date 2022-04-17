@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
 import googleIcon from '../../Image/icons/google.png'
 import './LogIn.css'
 
@@ -21,16 +21,26 @@ const LogIn = () => {
 
     const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
 
+    /*  store where it from  */
+    const navigate = useNavigate();
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
     const handlePassword = (event) => {
-        setEmail(event.target.value);
+        setPassword(event.target.value);
     }
     const handleEmail = (event) => {
-        setPassword(event.target.value);
+        setEmail(event.target.value);
 
     }
     const handleSubmit = (event) => {
         event.preventDefault();
+        // console.log(email, password);
         signInWithEmailAndPassword(email, password);
+    }
+
+    if (user || userGoogle) {
+        navigate(from,{replace:true});
     }
 
     return (
@@ -40,11 +50,11 @@ const LogIn = () => {
                     <Form onSubmit={handleSubmit} className='mx-auto w-75'>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
-                            <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" />
+                            <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" required/>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control onBlur={handlePassword} type="password" placeholder="Password" />
+                            <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required/>
                         </Form.Group>
                         <p style={{ color: "red" }}>{error?.message || errorGoogle?.message}</p>
                         {
@@ -65,7 +75,7 @@ const LogIn = () => {
                 <p>OR</p>
                 <div className='line'></div>
             </div>
-            <button onClick={() => signInWithGoogle()} className='google-login-container'><img src={googleIcon} alt="" /> <p> continue with google</p></button>
+            <button onClick={() => signInWithGoogle()} className='google-login-container px-2'><img src={googleIcon} alt="" /> <p> continue with google</p></button>
         </div>
     );
 };
