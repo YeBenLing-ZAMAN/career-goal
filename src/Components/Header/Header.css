@@ -1,0 +1,14 @@
+.CustomLink-container a{
+    margin-left : 20px ;
+    font-size: 22px;
+}
+
+.CustomLink-container a:hover{
+    color: rgb(63, 201, 130);
+}
+
+.nav-continer a{
+    text-decoration: none;
+    padding-right: 10px;
+    color: white !important;
+}
