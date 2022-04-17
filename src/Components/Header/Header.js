@@ -18,8 +18,6 @@ const Header = () => {
                             <CustomLink to="/course">Course</CustomLink>
                             <CustomLink to="/contact">Contact</CustomLink>
                             <CustomLink to="/blogs">Blogs</CustomLink>
-                            {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                            </NavDropdown> */}
                             <CustomLink to='/login'>Log In</CustomLink>
                             <CustomLink to="/signup" className='btn btn-danger rounded-pill px-4 text-light'>Sign Up</CustomLink>
                         </Nav>

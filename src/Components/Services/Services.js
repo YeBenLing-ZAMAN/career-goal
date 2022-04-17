@@ -7,7 +7,7 @@ import SoftEngi from '../Service/SoftEngi';
 import WebDevlopment from '../Service/WebDevlopment';
 import './Services.css';
 const Services = () => {
-    const [serivces, setServices] = useState('random');
+    const [serivces, setServices] = useState('web development');
 
     /* eisiting items  */
     const [services] = useServices();
@@ -39,9 +39,6 @@ const Services = () => {
                 </Container>
             </Navbar>
             <div>
-                {
-                    serivces === 'random' && <Random handleAddToCart={handleAddToCart}></Random>
-                }
                 {
                     serivces === 'web development' && <WebDevlopment handleAddToCart={handleAddToCart}></WebDevlopment>
                 }
