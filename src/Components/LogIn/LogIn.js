@@ -40,7 +40,8 @@ const LogIn = () => {
     }
 
     if (user || userGoogle) {
-        navigate(from,{replace:true});
+        console.log(from);
+        navigate(from, {replace:true});
     }
 
     return (
