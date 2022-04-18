@@ -68,19 +68,19 @@ const SignUp = () => {
                 <Form onSubmit={handleSubmit} className='mx-auto w-75'>
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Your Name" required/>
+                        <Form.Control autoComplete="on" type="text" placeholder="Enter Your Name" required/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control onBlur={handleEmail} type="email" placeholder="Enter Your email" required/>
+                        <Form.Control autoComplete="on" onBlur={handleEmail} type="email" placeholder="Enter Your email" required/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>New Password</Form.Label>
-                        <Form.Control onBlur={handlePassword} type="password" placeholder="Enter New Password" required/>
+                        <Form.Control autoComplete="on" onBlur={handlePassword} type="password" placeholder="Enter New Password" required/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPasswordConfirm">
                         <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control onBlur={handlConfirmPassword} type="password" placeholder="Confirm Password" required/>
+                        <Form.Control autoComplete="on" onBlur={handlConfirmPassword} type="password" placeholder="Confirm Password" required/>
                     </Form.Group>
                     <p style={{ color: "red" }}>{error?.message || errorGoogle?.message}</p>
                     <Button className='w-100' variant="danger" type="submit">
@@ -100,9 +100,9 @@ const SignUp = () => {
                 <button onClick={() => signInWithGoogle()} className='google-login-container m-2 px-2'>
                     <img src={googleIcon} alt="" /> <p> continue with google</p>
                 </button>
-                <button className='google-login-container m-2 px-2'>
+                {/* <button className='google-login-container m-2 px-2'>
                     <img src={faceBookIcon} alt="" /> <p> continue with faceBook</p>
-                </button>
+                </button> */}
             </div>
         </div>
     );

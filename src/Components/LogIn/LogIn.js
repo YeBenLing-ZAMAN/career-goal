@@ -54,7 +54,8 @@ const LogIn = () => {
 
     const resetPassword= async ()=>{
         await sendPasswordResetEmail(email);
-        toast ("reset email sended");
+        email && toast ("reset email sended");
+        // console.log(email);
     }
 
     return (
@@ -67,11 +68,11 @@ const LogIn = () => {
                     <Form onSubmit={handleSubmit} className='mx-auto w-75'>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
-                            <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" required />
+                            <Form.Control autoComplete="on" onBlur={handleEmail} type="email" placeholder="Enter email" required />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required />
+                            <Form.Control autoComplete="on" onBlur={handlePassword} type="password" placeholder="Password" required />
                         </Form.Group>
                         <p style={{ color: "red" }}>{error?.message || errorGoogle?.message}</p>
                         <Button className='w-100' variant="danger" type="submit">

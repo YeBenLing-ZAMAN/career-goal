@@ -5,9 +5,10 @@ const Blogs = () => {
         <div className='p-5 m-5 border border-2 shadow-lg border-danger'>
             <div>
                 <h3>Difference between authorization and authentication?</h3>
-                <p> <strong> Authentication:</strong> In a system user providing her username and password. Accoding to the email and password system find out who is the user.on the other hand
+                <p> <strong> Authentication:</strong> In a system user providing her username and password. Accoding to the email and password system find out who is the user.
                     <br />
-                    <strong>Authorization:</strong> in a system authorization is the process of verifying what router/path, files, and data a user has access to</p>
+                    <strong>Authorization:</strong> in a system authorization is the process of verifying what router/path, files, and data a user has access to.</p>
+                    <p>In one sentence difference is Authentication is who are you or your identity and Authorization is where are you allow to access.</p>
             </div>
             <hr />
             <div>
