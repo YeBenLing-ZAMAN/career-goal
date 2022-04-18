@@ -28,7 +28,7 @@ const Services = () => {
     }
     // console.log(cart.length);
     return (
-        <div>
+        <div style={{minHeight:"calc(100vh - 76px)"}}>
             <Navbar id="menu" bg="light" variant="light">
                 <Container className='services-continer'>
                     <Nav className="mx-auto">

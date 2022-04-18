@@ -1,0 +1,19 @@
+.feedback-bg{
+    background-image: url(./Image/shapes/shape-4.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 100px 100px;
+}
+
+.feedback-left-bg{
+    background-image: url(./Image/shapes/shape-5.png),url(./Image/shapes/shape-6.png);
+    background-repeat: no-repeat;
+    background-position: bottom left, center right;
+    background-size: 100px 100px, 100px 100px;
+}
+.feedback-right-bg{
+    background-image: url(./Image/shapes/shape-1.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 100px 100px;
+}

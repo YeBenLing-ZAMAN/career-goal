@@ -19,7 +19,7 @@ const Header = () => {
             }
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="home#home">
                         AIM |<span className=''> Foucs </span>
                         <span className='d-none d-md-block text-sm'>Helping to make your career as a developer</span>
                     </Navbar.Brand>
@@ -28,6 +28,7 @@ const Header = () => {
                         <Nav className="ms-auto nav-continer d-flex align-items-center">
                             <CustomLink to="/">Home</CustomLink>
                             <CustomLink to="/course">Course</CustomLink>
+                            <Nav.Link href="home#review">Reviews</Nav.Link>
                             <CustomLink to="/about">About</CustomLink>
                             <CustomLink to="/blogs">Blogs</CustomLink>
                             {
