@@ -8,7 +8,7 @@
       "picture": "https://i.ibb.co/Hhk6RZw/11.jpg",
       "name": "HTML and CSS",
       "Type": "web development",
-      "about": "Consequat cillum eu amet nulla duis sint anim tempor fugiat. Exercitation officia fugiat nulla quis eu Lorem veniam. Velit sit laborum nisi exercitation excepteur. Irure tempor duis aliquip mollit consectetur. Consequat aliqua dolore culpa culpa do anim eiusmod excepteur proident non qui quis exercitation. Magna officia esse pariatur ad sit nulla deserunt voluptate minim eu ipsum.\r\n"
+      "about": "Web Development for absolute beginners.Learn HTML5 and CSS3 from scratch by building 20+ amazing real world projects.\r\n"
     },
     {
       "id": "625bb634eda0733a0b918b97",
@@ -19,7 +19,7 @@
       "picture": "https://i.ibb.co/PTwShcx/09.jpg",
       "name": "JavaScript",
       "Type": "web development",
-      "about": "Excepteur quis tempor proident nostrud veniam fugiat et nulla laboris qui aliquip qui et. Elit in magna eiusmod commodo ex id labore eu nisi. Veniam ea officia commodo cillum ut. Aliquip dolor ad proident eu magna ex incididunt ipsum voluptate qui nisi Lorem ea. Amet ullamco nostrud cillum laboris ipsum. Consectetur consectetur quis Lorem cupidatat.\r\n"
+      "about": "The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!.\r\n"
     },
     {
       "id": "625bb6343e9894a9e9057d9c",
@@ -30,7 +30,7 @@
       "picture": "https://i.ibb.co/cDhHZk1/06.jpg",
       "name": "Angular",
       "Type": "web development",
-      "about": "Aliquip consectetur labore adipisicing ex ipsum anim. Cillum nisi qui irure sunt. Deserunt voluptate ipsum fugiat qui esse sint esse Lorem mollit.\r\n"
+      "about": "Use Angular, Angular Material, Angularfire (+ Firebase with Firestore) and NgRx to build a real Angular App.\r\n"
     },
     {
       "id": "625bb634d22a37af8e477a3e",
@@ -41,7 +41,7 @@
       "picture": "https://i.ibb.co/wrtcnn8/07.jpg",
       "name": "React",
       "Type": "web development",
-      "about": "Non voluptate ad irure do. Elit excepteur reprehenderit ipsum culpa sunt duis eu deserunt anim. Amet minim sit fugiat fugiat veniam enim Lorem officia proident id fugiat exercitation. Nulla veniam mollit consequat laboris anim cillum id non quis.\r\n"
+      "about": "Learn React from the ground up to make dynamic websites (includes Context, Hooks, Reducers, Routing, Auth, Databases).\r\n"
     },
     {
       "id": "625bb634554290dd3955c762",
@@ -52,7 +52,7 @@
       "picture": "https://i.ibb.co/gVtCsGw/13.jpg",
       "name": "PHP",
       "Type": "web development",
-      "about": "Amet laboris qui eu tempor proident. Lorem veniam duis exercitation id elit laboris fugiat. Consequat Lorem ad eu eu adipisicing non nostrud sit. Sint elit adipisicing eu sint. Irure esse cupidatat velit laborum labore fugiat nisi mollit cillum qui.\r\n"
+      "about": "Use REST APIs from PHP, and create your own RESTful API using plain PHP, with API key and JWT token authentication.\r\n"
     },
     {
       "id": "625bb6342d5be53c7b6a593a",
@@ -63,7 +63,7 @@
       "picture": "https://i.ibb.co/ChtSZ3r/05.jpg",
       "name": "Python",
       "Type": "AI",
-      "about": "Quis incididunt quis ipsum sit fugiat culpa veniam dolore ipsum id. Excepteur aute pariatur nulla ullamco. Ut anim ex deserunt minim sit mollit. Voluptate tempor commodo labore sit culpa eiusmod consectetur. Fugiat id non est incididunt ex.\r\n"
+      "about": "The best way to learn Python online! Understand, practice, and master Python with real-world examples. Zero to advanced! .Learn how to use NumPy, Pandas, Seaborn , Matplotlib , Plotly , Scikit-Learn , Machine Learning, Tensorflow , and more!\r\n"
     },
     {
       "id": "625bb6340497ed33ba513ade",
@@ -71,10 +71,10 @@
       "guid": "e8ae0f9c-0e1f-4bb1-8ac9-0c18b88ba09e",
       "isActive": false,
       "balance": "$80.09",
-      "picture": "http://placehold.it/32x32",
-      "name": "Owen Harrell",
-      "Type": "RONBERT",
-      "about": "Ad magna elit reprehenderit tempor. Voluptate quis reprehenderit quis culpa proident velit elit sint ad labore magna officia esse esse. Excepteur elit labore elit cillum voluptate laborum cillum laboris pariatur anim velit aliquip adipisicing ut. Ut enim mollit minim in. Excepteur pariatur consequat aute adipisicing excepteur ullamco ipsum eu exercitation elit commodo sit. Deserunt voluptate aliqua veniam consequat non pariatur ipsum ut voluptate do.\r\n"
+      "picture": "https://i.ibb.co/FKqKzRj/ml.jpg",
+      "name": "Machine learning",
+      "Type": "AI",
+      "about": "Build Powerful Machine Learning Models w/Zero Coding! Master Google Vertex AI, Microsoft Azure ML Designer, & DataRobot\r\n"
     },
     {
       "id": "625bb634370be1c506e14c27",
@@ -82,10 +82,10 @@
       "guid": "abc6bc26-4f9b-436d-82e8-1879f871c369",
       "isActive": true,
       "balance": "$114.11",
-      "picture": "http://placehold.it/32x32",
-      "name": "Mays Mullen",
-      "Type": "QABOOS",
-      "about": "Ullamco ipsum eiusmod cillum proident tempor excepteur labore dolore sit consequat ipsum nisi elit. Exercitation et ea adipisicing labore laborum incididunt. Nostrud consequat elit reprehenderit voluptate dolor. Exercitation ullamco id consequat esse amet enim enim. Cupidatat pariatur mollit ad quis culpa officia ut nisi eiusmod. Tempor esse velit eu amet ut est nulla elit do nisi mollit.\r\n"
+      "picture": "https://i.ibb.co/C8v7STW/ai.jpg",
+      "name": "Artificial intelligence",
+      "Type": "AI",
+      "about": "Build Artificial Intelligence (AI) agents using Deep Reinforcement Learning and PyTorch: A2C, REINFORCE, DQN, etc.\r\n"
     },
     {
       "id": "625bb6346a6cd9a99bf000b0",
@@ -93,9 +93,20 @@
       "guid": "6bbb3517-0c94-4463-9281-d72937ef9652",
       "isActive": false,
       "balance": "$62.50",
-      "picture": "http://placehold.it/32x32",
-      "name": "Fulton Montgomery",
-      "Type": "GOLISTIC",
-      "about": "Sint labore proident deserunt esse eu duis sint qui elit nulla ex eiusmod ex velit. Nulla laborum aliquip esse incididunt esse dolor anim aliqua magna ex. Do consectetur amet sunt mollit pariatur tempor.\r\n"
+      "picture": "https://i.ibb.co/j4WFJ7Z/java.jpg",
+      "name": "Data Structures & Algorithms in Java",
+      "Type": "Software Engineering",
+      "about": "Get interview-ready with this course that has no prerequisites and is designed to make you an expert in solving easy to hard LeetCode problems with ease.\r\n"
+    },
+    {
+      "id": "625bb6346a6cd9a99bf023400b0",
+      "index": 8,
+      "guid": "6bbb3517-0c94-4463-9281-d72937ef9652",
+      "isActive": false,
+      "balance": "$62.50",
+      "picture": "https://i.ibb.co/SNqc6PF/devpos.jpg",
+      "name": "DevOps",
+      "Type": "Software Engineering",
+      "about": "Without a doubt, DevOps engineer is the most in-demand role in the current market, especially with an increased number of high paying remote opportunities.\r\n"
     }
   ]

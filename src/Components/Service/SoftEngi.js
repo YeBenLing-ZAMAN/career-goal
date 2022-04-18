@@ -5,7 +5,7 @@ import ServiceAsCartShowing from './ServiceAsCartShowing';
 
 const SoftEngi = ({handleAddToCart}) => {
     const [services] = useServices();
-    const softErg = services.filter(service => service.Type === 'AI');
+    const softErg = services.filter(service => service.Type === 'Software Engineering');
     return (
         <div>
             <Row xs={1} md={3} className="container mx-auto g-4 pt-5">
