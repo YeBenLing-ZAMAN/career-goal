@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import googleIcon from '../../Image/icons/google.png';
 import faceBookIcon from '../../Image/icons/Facebook_f_logo_(2019).svg';
+import { sendEmailVerification } from 'firebase/auth';
 
 const SignUp = () => {
     /* make store for all */
@@ -12,10 +13,12 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
-    const naviagte = useNavigate();
+    const navigate = useNavigate();
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     /* firebasd-hooks state used */
-    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true})
 
     /* sign in firebase-hooks with google */
     const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
@@ -32,7 +35,7 @@ const SignUp = () => {
     }
 
     if (user || userGoogle) {
-        naviagte('/home');
+        navigate(from, {replace:true});
     }
 
     /* handle to submit button when it clicked */

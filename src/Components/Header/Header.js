@@ -2,6 +2,7 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import CustomLink from './CustomLink';
 import './Header.css';
@@ -15,8 +16,8 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home">
-                        AIM |<span className=''> Foucs Terget</span>
-                        <span className='d-none d-md-block text-sm'>Helping to make your career as a storices</span>
+                        AIM |<span className=''> Foucs </span>
+                        <span className='d-none d-md-block text-sm'>Helping to make your career as a developer</span>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -28,7 +29,7 @@ const Header = () => {
                             {
                                 user
                                     ?
-                                    <CustomLink to='/signup' onClick={logout} className='btn btn-danger rounded-pill px-4 text-light'>Log out</CustomLink>
+                                    <CustomLink to='/' onClick={logout} className='btn btn-danger rounded-pill px-4 text-light'>Log out</CustomLink>
                                     :
                                     <>
                                         <CustomLink to='/login'>Log In</CustomLink>
