@@ -3,6 +3,7 @@ import './App.css';
 import About from './Components/About/About';
 import RequireAuth from './Components/Auth/RequireAuth';
 import Blogs from './Components/Blogs/Blogs';
+import CheckOut from './Components/CheckOut/CheckOut';
 import DisplayCourse from './Components/DisplayCourse/DisplayCourse';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
@@ -20,7 +21,12 @@ function App() {
         <Route path='/' element={<HomePage></HomePage>}></Route>
         <Route path='/home' element={<HomePage></HomePage>}></Route>
         <Route path='/course' element={<Services></Services>}></Route>
-        <Route path='course/:displayCourseID' element={<RequireAuth><DisplayCourse></DisplayCourse></RequireAuth>}></Route>
+        <Route path='course/:displayCourseID' element={<DisplayCourse></DisplayCourse>}></Route>
+        <Route path='course/:displayCourseID/:checkout' element={
+          <RequireAuth>
+            <CheckOut></CheckOut>
+          </RequireAuth>
+        }></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
@@ -28,7 +34,7 @@ function App() {
         <Route path='*' element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
       <Footer></Footer>
-      
+
     </div>
   );
 }
