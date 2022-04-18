@@ -20,11 +20,7 @@ function App() {
         <Route path='/' element={<HomePage></HomePage>}></Route>
         <Route path='/home' element={<HomePage></HomePage>}></Route>
         <Route path='/course' element={<Services></Services>}></Route>
-        <Route path='course/:displayCourseID' element={
-          <RequireAuth>
-            <DisplayCourse></DisplayCourse>
-          </RequireAuth>
-        }></Route>
+        <Route path='course/:displayCourseID' element={<RequireAuth><DisplayCourse></DisplayCourse></RequireAuth>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>

@@ -11,7 +11,7 @@ const ServiceAsCartShowing = ({item, handleAddToCart}) => {
 
     return (
         <Col className='d-flex'>
-        <Card className=''>
+        <Card className='shadow-lg'>
             <Card.Img className='mx-auto img-fluid'  variant="top" src={picture} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
@@ -21,8 +21,7 @@ const ServiceAsCartShowing = ({item, handleAddToCart}) => {
                         <h3>{balance}</h3>
                     </div>
                     <div className='ms-auto'>
-                    <Button variant="outline-primary me-2">see more</Button>
-                    <Button onClick={()=>navigateToCourseDisplay(id)} variant="outline-danger">Add cart</Button>
+                    <Button onClick={()=>navigateToCourseDisplay(id)} variant="outline-danger">Enroll</Button>
                     </div>
                 </div>
             </Card.Body>

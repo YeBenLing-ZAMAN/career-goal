@@ -6,6 +6,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-fi
 import googleIcon from '../../Image/icons/google.png';
 import faceBookIcon from '../../Image/icons/Facebook_f_logo_(2019).svg';
 import { sendEmailVerification } from 'firebase/auth';
+import Loading from '../Loading/Loading';
 
 const SignUp = () => {
     /* make store for all */
@@ -18,7 +19,7 @@ const SignUp = () => {
     let from = location.state?.from?.pathname || "/";
 
     /* firebasd-hooks state used */
-    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true})
+    const [createUserWithEmailAndPassword, user, loading] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true})
 
     /* sign in firebase-hooks with google */
     const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
@@ -58,6 +59,9 @@ const SignUp = () => {
     return (
         <div className='form-container d-flex flex-column align-items-center justify-content-center'>
             <div className='w-50 from-red-onion'>
+            {
+                (loadingGoogle || loading) && <Loading></Loading>
+            }
                 <Form onSubmit={handleSubmit} className='mx-auto w-75'>
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Label>Name</Form.Label>
@@ -75,7 +79,7 @@ const SignUp = () => {
                         <Form.Label>Confirm Password</Form.Label>
                         <Form.Control onBlur={handlConfirmPassword} type="password" placeholder="Confirm Password" required/>
                     </Form.Group>
-                    <p style={{ color: "red" }}>{error}</p>
+                    <p style={{ color: "red" }}>{error?.message || errorGoogle?.message}</p>
                     <Button className='w-100' variant="danger" type="submit">
                         Sign Up
                     </Button>

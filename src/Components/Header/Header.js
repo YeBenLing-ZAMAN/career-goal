@@ -4,6 +4,7 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 import CustomLink from './CustomLink';
 import './Header.css';
 const Header = () => {
@@ -13,6 +14,9 @@ const Header = () => {
     };
     return (
         <div className='sticky-sm-top'>
+            {
+                (loading) && <Loading></Loading>
+            }
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home">
