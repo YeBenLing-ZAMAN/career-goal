@@ -1,0 +1,4 @@
+.about-container{
+    min-height: calc(100vh - 76px);
+    background-color: rgba(165, 254, 208, 0.655);
+}

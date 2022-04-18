@@ -20,7 +20,7 @@ const HomePage = () => {
                     <h1>Foucs on Your Goal</h1>
                     <h1>Rock your Career Brand</h1>
                     <h1>Limitless learning with me | Get Hired</h1>
-                    <p className='btn btn-danger rounded-pill' onClick={navigateToLoginPage}>Get Started Now</p>
+                    <p className='btn btn-danger rounded-pill' onClick={navigateToLoginPage}>Get Start with Me</p>
                 </div>
             </div>
             <Services></Services>
