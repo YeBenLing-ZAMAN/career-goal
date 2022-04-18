@@ -13,7 +13,7 @@ const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [error, setError] = useState('');
+    const [error, setError] = useState('');// custome error 
     const navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -82,7 +82,7 @@ const SignUp = () => {
                         <Form.Label>Confirm Password</Form.Label>
                         <Form.Control autoComplete="on" onBlur={handlConfirmPassword} type="password" placeholder="Confirm Password" required/>
                     </Form.Group>
-                    <p style={{ color: "red" }}>{error?.message || errorGoogle?.message}</p>
+                    <p style={{ color: "red" }}>{error || errorGoogle?.message}</p>
                     <Button className='w-100' variant="danger" type="submit">
                         Sign Up
                     </Button>

@@ -1,5 +1,5 @@
 .form-container{
-    height: 100vh;
+    min-height: 100vh;
 }
 .from-red-onion img{
     width: 200px;

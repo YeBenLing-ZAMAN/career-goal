@@ -9,7 +9,12 @@ import './Services.css';
 const Services = () => {
     const [serivces, setServices] = useState('web development');
 
-    /* eisiting items  */
+    /*
+     *this part for store items in loacl store
+     *but it's not complete yet
+     *near future it will be developing 
+     */
+    /* existing items  */
     const [services] = useServices();
     /* for slected items  */
     const [cart, setCart] = useState([]);
@@ -22,13 +27,16 @@ const Services = () => {
             newCart = [...cart, selectedItem];
         } else {
             /* ekta message show korbo toast use koren pore thar code ta ami lekhbo ne  */
-            newCart=[...cart];
+            newCart = [...cart];
         }
         setCart(newCart);
     }
     // console.log(cart.length);
+
+
+    
     return (
-        <div style={{minHeight:"calc(100vh - 76px)"}}>
+        <div style={{ minHeight: "calc(100vh - 76px)" }}>
             <Navbar id="menu" bg="light" variant="light">
                 <Container className='services-continer'>
                     <Nav className="mx-auto">

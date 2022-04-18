@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import notFoundImage from '../../Image/icons/page404.png';
-
+/* 
+*one side text and other side image  */
 const NotFoundPage = () => {
     return (
         <div>

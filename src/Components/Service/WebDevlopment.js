@@ -3,6 +3,8 @@ import { Row } from 'react-bootstrap';
 import useServices from '../hooks/useServices';
 import ServiceAsCartShowing from './ServiceAsCartShowing';
 
+
+ /* use map for commmon rendering   */
 const WebDevlopment = ({handleAddToCart}) => {
     const [services] = useServices();
     const webDevelop = services.filter(service => service.Type === 'web development');
