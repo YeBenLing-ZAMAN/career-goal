@@ -8,6 +8,7 @@ import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import HomePage from './Components/HomePage/HomePage';
 import LogIn from './Components/LogIn/LogIn';
+import NotFoundPage from './Components/NotFoundPage/NotFoundPage';
 import Services from './Components/Services/Services';
 import SignUp from './Components/SignUp/SignUp';
 
@@ -28,8 +29,10 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='*' element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
       <Footer></Footer>
+      
     </div>
   );
 }
