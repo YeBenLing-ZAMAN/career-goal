@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -35,9 +35,12 @@ const SignUp = () => {
         setConfirmPassword(event.target.value);
     }
 
-    if (user || userGoogle) {
-        navigate(from, {replace:true});
-    }
+    useEffect(()=>{
+        if (user || userGoogle) {
+            navigate(from, {replace:true});
+        }
+    },[user, userGoogle])
+    
 
     /* handle to submit button when it clicked */
     const handleSubmit = (event) => {

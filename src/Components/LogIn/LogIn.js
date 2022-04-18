@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -45,9 +45,12 @@ const LogIn = () => {
         signInWithEmailAndPassword(email, password);
     }
 
-    if (user || userGoogle) {
-        navigate(from, { replace: true });
-    }
+    useEffect(()=>{
+        if (user || userGoogle) {
+            navigate(from, { replace: true });
+        }
+    },[user,userGoogle])
+    
 
     const resetPassword= async ()=>{
         await sendPasswordResetEmail(email);
